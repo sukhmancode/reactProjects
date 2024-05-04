@@ -1,0 +1,28 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+:root {
+  --black-color:#000;
+  --white-color:#fff;
+  --accent-color:#a445ed;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black-color);
+  color:var(--white-color);
+ 
+  
+}
+.nav-bar{
+  padding: 3rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.language-dropdown { 
+  border-right: 1px solid #ccc;
+}
