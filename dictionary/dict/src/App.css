@@ -20,12 +20,10 @@ body {
   background-color: var(--black-color);
   color:var(--white-color);
   font-family: "Inter", sans-serif;
-  
 }
 .container{
   gap: 2rem;
-  max-width: 700px;
-  min-width: 700px;
+  width: 700px;
   display: flex;
   flex-direction: column;
 }
@@ -36,7 +34,7 @@ body {
   
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  width: 700px;
   align-self: center;
   
 }
@@ -65,7 +63,7 @@ body {
   border-right: 1px solid #ccc;
 }
 .search-input-form input[type="text"]{
-  width: 700px;
+  width: 100%;
   background-color: transparent;
   padding: 2rem;
   border: none;
@@ -90,6 +88,7 @@ body {
   align-self: center;
 }
 .search-input-form{
+  width: 700px;
 
   justify-content: center;
   border-radius: 1.7rem;
@@ -149,4 +148,30 @@ body {
     margin-inline-end: 1rem;
     content: "• ";
     color: var(--accent-color);
+  }
+
+  .synomyms{
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+  }
+  .synomyms h2{
+    font-size: 1.8rem;
+    font-style: italic;
+
+  }
+  .synomyms h3{ 
+    font-size: 1.8rem;
+    color:var(--accent-color)
+  }
+  @media screen and (max-width:768px) {
+    .container{
+      width: 100%;
+    }
+    .search-input-form{
+      width: 100%;
+    }
+    .nav-bar{
+      width: 100%;
+    }
   }

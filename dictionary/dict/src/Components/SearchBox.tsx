@@ -116,6 +116,19 @@ const SearchBox: React.FC = () => {
                                 )
                             ))}
                         </ul>
+
+                        <div className='synomyms '>
+                            <h2>Synonyms</h2>
+                            {dic.meanings.map((mean, meanIndex) => (
+                                mean.synonyms.map((synonym, synIndex) => (
+                                    <div key={synIndex}>
+                                        <h3>{synonym}</h3>
+                                    </div>
+                                   
+                                ))
+                            ))}
+                        </div>
+
                     </div>
                 ))}
             </div>
