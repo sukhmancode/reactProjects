@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+// DropdownFont.tsx
+import React from 'react';
+import { useFontContext } from '../context/Font';
 
 const DropdownFont: React.FC = () => {
-    const [selectedFont, setSelectedFont] = useState("Sans-serif");
+    const {setSelectedFont } = useFontContext();
 
     const handleFontChange = (font: string) => {
         setSelectedFont(font);

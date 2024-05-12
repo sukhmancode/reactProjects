@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { FontContext, useFontContext } from '../context/Font';
 
 interface Words {
     word: string;
@@ -17,6 +18,7 @@ interface Words {
 }
 
 const SearchBox: React.FC = () => {
+    const { selectedFont } = useFontContext();
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const [inputData, setInputData] = useState('');
     const [dictionaryData, setDictionaryData] = useState<Words[]>([])
@@ -47,7 +49,7 @@ const SearchBox: React.FC = () => {
         fetchApi(inputData)
     }
     return (
-        <div className='center words'>
+        <div className='center words' style={{fontFamily:selectedFont}}>
             <form className='search-input-form' tabIndex={0} onSubmit={handleSubmit}>
                 <input
                     type='text'
