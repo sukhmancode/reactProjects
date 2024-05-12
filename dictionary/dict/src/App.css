@@ -52,15 +52,38 @@ body {
   position: relative;
 }
 .toggle-circle{
-  width: 10px;
-  height: 10px;
+  top: 12%;
+  left: 1%;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   position: absolute;
   background-color: var(--white-color);
 }
 .language-dropdown { 
+  cursor: pointer;
   padding-inline-end: 2rem;
   border-right: 1px solid #ccc;
+}
+.dropdown-fonts {
+  border-radius: 8px;
+  z-index: 1111111;
+  cursor: pointer;
+  top: 18%;
+  transform: translateX(-30px);
+  padding: 2.3rem;
+  position: absolute;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 30px var(--accent-color);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.dropdown-fonts ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.8rem;
+  list-style: none;
+  
 }
 .search-input-form input[type="text"]{
   width: 100%;
@@ -143,7 +166,7 @@ body {
   margin-block: 2rem;
 }
 
-  li::before {
+  .list-parent li::before {
 
     margin-inline-end: 1rem;
     content: "• ";
