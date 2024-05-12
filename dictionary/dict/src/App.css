@@ -206,8 +206,7 @@ body {
     }
   }
   @media screen and (max-width:400px) {
-    html,body{
-    }
+   
     .nav-bar{
       flex-direction: column;
       gap: 2rem;
