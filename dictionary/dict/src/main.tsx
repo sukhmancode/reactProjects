@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { FontProvider } from './context/Font.tsx'
+import { ThemeProvider } from './context/ThemeContext.tsx'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <FontProvider>
-      <App />
-    </FontProvider>
+      <ThemeProvider>
+      <FontProvider>
+        <App />
+      </FontProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 )

@@ -7,11 +7,17 @@
 html {
   font-size: 62.5%;
 }
-:root {
+[data-theme="dark"] {
   --black-color:#000;
   --white-color:#fff;
   --accent-color:#a445ed;
   --search-color:#3a3a3a;
+}
+[data-theme="light"] {
+  --black-color:#fff;
+  --white-color:#000;
+  --accent-color:#a445ed;
+  --search-color:#ccc;
 }
 body {
   display: flex;
@@ -189,6 +195,7 @@ body {
   }
   @media screen and (max-width:768px) {
     .container{
+      padding: 2rem;
       width: 100%;
     }
     .search-input-form{
@@ -196,5 +203,16 @@ body {
     }
     .nav-bar{
       width: 100%;
+    }
+  }
+  @media screen and (max-width:400px) {
+    html,body{
+    }
+    .nav-bar{
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .heading-play-btn{
+      flex-direction: column;
     }
   }

@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { FontContext, useFontContext } from '../context/Font';
+import React, { useEffect, useState } from 'react';
+import { useFontContext } from '../context/Font';
 
 interface Words {
     word: string;
@@ -33,7 +33,6 @@ const SearchBox: React.FC = () => {
 
             const data: Words[] = await response.json();
             setDictionaryData(data)
-            console.log(data);
         } catch (error) {
             console.error('Error fetching data:', error);
             setErrorMessage('An error occurred while fetching data.');
@@ -85,7 +84,7 @@ const SearchBox: React.FC = () => {
                             <h2>Meaning</h2>
                         </div>
                         <ul className='list-parent'>
-                            {dic.meanings.map((mean, meanIndex) => (
+                            {dic.meanings.map((mean) => (
                                 mean.partOfSpeech === "verb" && (
                                     mean.definitions.map((definition, defIndex) => (
                                         <div key={defIndex}>
@@ -107,7 +106,7 @@ const SearchBox: React.FC = () => {
                         </div>  
                     
                         <ul className='list-parent'>
-                            {dic.meanings.map((mean, meanIndex) => (
+                            {dic.meanings.map((mean) => (
                                 mean.partOfSpeech === "noun" && (
                                     mean.definitions.map((definition, defIndex) => (
                                         <div key={defIndex}>
@@ -121,7 +120,7 @@ const SearchBox: React.FC = () => {
 
                         <div className='synomyms '>
                             <h2>Synonyms</h2>
-                            {dic.meanings.map((mean, meanIndex) => (
+                            {dic.meanings.map((mean) => (
                                 mean.synonyms.map((synonym, synIndex) => (
                                     <div key={synIndex}>
                                         <h3>{synonym}</h3>
